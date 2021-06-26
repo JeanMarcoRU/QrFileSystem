@@ -707,4 +707,4 @@ int main(int argc, char *argv[]){
 }
 
 /* compilar -> gcc -Wall -lm imageFS.c `pkg-config fuse --cflags --libs` -o fs */ //gcc -Wall imageFS.c -lm `pkg-config fuse --cflags --libs` -o fs
-/* montar -> ./fs -f [punto de montaje] */
+/* montar -> ./fs -f [punto de montaje] */ //./fs -f ./estatica.bmp
