@@ -82,7 +82,7 @@ int buscar_archivo(const char *filename){
 int byte_invalido(int byte){
   double numero = (((double)byte+3)/12.0);
   if(!byte) return 0;
-  return (0); //return (fabs(floor(numero) - (double)numero) < 0.00001);
+  return (fabs(floor(numero) - (double)numero) < 0.00001); //return (0); 
 }
 
 
@@ -706,5 +706,5 @@ int main(int argc, char *argv[]){
     return fuse_main( argc, argv, &operations, NULL );
 }
 
-/* compilar -> gcc -Wall -lm imageFS.c `pkg-config fuse --cflags --libs` -o fs */
+/* compilar -> gcc -Wall -lm imageFS.c `pkg-config fuse --cflags --libs` -o fs */ //gcc -Wall imageFS.c -lm `pkg-config fuse --cflags --libs` -o fs
 /* montar -> ./fs -f [punto de montaje] */
