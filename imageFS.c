@@ -82,7 +82,7 @@ int buscar_archivo(const char *filename){
 int byte_invalido(int byte){
   double numero = (((double)byte+3)/12.0);
   if(!byte) return 0;
-  return (fabs(floor(numero) - (double)numero) < 0.00001);
+  return (0); //return (fabs(floor(numero) - (double)numero) < 0.00001);
 }
 
 
